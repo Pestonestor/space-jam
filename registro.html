@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="shortcut icon" href="./img/pastel icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/27becc0c4f.js" crossorigin="anonymous"></script>
+</head>
+<body class="noBackImage ovfScroll">
+    <header id="header"></header>
+    <main>
+        <h2>Registro</h2>
+        <form action="show_data.html">
+            <label for="txtNombre">Nombre<br></label><input type="text" name="txtNombre" id="txtNombre"  placeholder="John"><br>
+            <label for="txtApellido">Apellido<br></label><input type="text" name="txtApellido" id="txtApellido"  placeholder="Doe"><br>
+            <label for="txtEdad">Edad<br></label><input type="text" name="txtEdad" id="txtEdad" min=0 max=100  placeholder="0-99"> <br>
+            <label for="txtMail">Mail<br></label><input type="email" name="txtMail" id="txtMail" placeholder="yourmail@xmail.com"><br>
+            <label for="txtPassword">Contraseña:<br></label><input type="password" name="txtPassword" id="txtPassword" placeholder="password"><br>
+            <label for="txxNacimiento">Fecha de Nac.<br></label><input type="date" name="txxNacimiento" id="txxNacimiento" min="1900-01-01" max="2023-01-15">
+            <p>Género:<br>
+            <input type="radio" name="txtGenero" id="txtGeneroH" value="hombre" checked>Hombre
+            <input type="radio" name="txtGenero" id="txtGeneroM" value="mujer" >Mujer
+            <input type="radio" name="txtGenero" id="txtGeneroO" value="otro" >Otro
+            </p>
+            <label for="txtEstudios">Que estudios tenés completos?</label>
+            <select name="txtEstudios" id="txtEstudios">
+                <option value="primarios">Primarios
+                <option value="secundarios">Secundarios
+                <option value="terciarios">Terciarios
+                <option value="universitarios">Universitarios
+            </select><br>
+            <p>Tus gustos: <br>
+            <input type="checkbox" name="txtGustos" id="txtGustosC" value="caminata_espacial">Caminata Espacial
+            <input type="checkbox" name="txtGustos" id="txtGustosP" value="salto_lunar">Salto Lunar<br>
+            <input type="checkbox" name="txtGustos" id="txtGustosF" value="caza_furtiva">Caza Furtiva 
+            <input type="checkbox" name="txtGustos" id="txtGustosCR" value="coleccion_rocas">Coleccionar Rocas<br>
+            <input type="checkbox" name="txtGustos" id="txtGustosD" value="mirar_estrellas">Mirar Estrellas
+            <input type="checkbox" name="txtGustos" id="txtGustosN" value="asado">Asado con Amigos
+            </p>
+            <label for="txtComentarios">Dejanos un comentario :)</label><br>
+            <textarea name="txtComentarios" id="txtComentarios"  col="20" rows="6" placeholder="Esta página es lo mejor porque..."></textarea><br><br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </form><br>
+    </main>
+    <footer></footer>
+    <script src="./js/main.js"></script>
+    
+</body>
+</html>

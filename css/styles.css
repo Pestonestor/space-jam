@@ -1,0 +1,250 @@
+html{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body{
+    margin: 0px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    background-image: url("../img/cielo\ azul\ chico.jpg");
+    background-repeat: no-repeat;
+    background-size: cover ;
+    background-color: rgb(100, 149, 223);
+    overflow: hidden;
+}
+.noBackImage{
+    background-image: none;
+    background-image: linear-gradient(to top, rgb(157, 195, 255) 5%, rgb(240, 255, 255) 50%)
+}
+.ovfScroll{
+    overflow: scroll;
+}
+header{
+    z-index: 2;
+    position: fixed;
+    top: 8px;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(to right, rgba(108, 211, 218, 0.5), rgba(83, 174, 162, 0.8), rgb(213, 230, 212),rgba(83, 174, 154, 0.8),rgba(108, 202, 218, 0.5)) ;
+}
+h1{
+    margin: 0;
+}
+footer{
+    z-index: 2;
+    height: fit-content;
+    text-align: left;
+    padding-left: 10vw;
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(0, 255, 170, 0.25), rgb(62, 225, 97), rgb(151, 228, 170),rgb(62, 225, 97), rgba(0, 255, 170, 0.25));
+}
+.attributions{
+    position: fixed;
+    bottom: 0px;
+    font-size: xx-small;
+}
+.attributions a{
+    color: rgb(220, 245, 238);
+}
+/*animacion de imagen en INDEX:HTML*/
+#alienId{
+    width: 50px;
+    position: absolute;
+    margin: auto;
+    opacity: 0;
+    left: 0px;
+    top: 100px;
+    animation-name: alien;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+}
+@keyframes alien{
+    20%{transform: translate(70vw,10vh) scale(2); opacity: 1}
+    40%{transform: translate(10vw,20vh) scale(3); opacity: 1;}
+    60%{transform: translate(60vw,30vh) scale(4);opacity: 1;}
+    80%{transform: translate(40vw,70vh) scale(6); opacity: 0;}
+    100%{}
+}
+nav a{
+    margin-left: 2em;
+}
+/*TRANSFORM aplicado a planetas en NOSOTROS:HTML*/
+#moon{
+    z-index: 1;
+    position: absolute;
+    right: 5px;
+    top: 25vh;
+    width: 100px;
+    overflow: hidden;
+}
+#earth{
+    z-index: 1;
+    position: absolute;
+    left: -50px;
+    top: 22vh;
+    width: 200px;
+    overflow: hidden;
+}
+#planet{
+    z-index: 0;
+    position: absolute; 
+    bottom: -530px;
+    right: 5%;
+    overflow: hidden;
+}
+#moon:hover{
+    width: 200px;
+    right: 30px;
+    transform: rotate(20deg) translateY(50px);
+    transition: all 3s;
+}
+#earth:hover{
+    width: 300px;
+    transform: translateY(50px) rotate(-20deg);
+    transition: all 3s;
+    overflow: hidden;
+}
+
+#planet:hover{
+    
+    transform: rotate(-20deg) translate(50px,-50px);
+    transition: all 3s;
+}
+/*animacion para link generado por funciones de JS en FOOTER de NOSOTROS:HTML*/
+h4 a{
+    padding: 4px 8px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px black;
+    background-color: rgb(255, 0, 0);
+    animation-name: nosotrosSuc;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes nosotrosSuc{
+    from{}
+    50%{background-color: rgb(251, 255, 0);}
+    to{}
+}
+/*SUCURSALES.HTML con anclas*/
+article{
+    position: relative;
+    top: 140px;
+    background-color: rgb(178, 225, 225);
+    width: 90%;
+    margin: 50px auto 200px;
+    padding: 8px;
+    border: 2px solid black;
+    font-size: x-large;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px white;
+}
+article span{
+    box-sizing: border-box;
+    background-color: rgb(0, 255, 157);
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 2px 4px;
+}
+main{
+    padding-bottom: 450px;
+}
+/*CLIENTES.HTML hecho con FLEX*/
+#clientContainer{
+    position: absolute;
+    top: 130px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 12px
+}
+.clientCard{
+    width: 200px;
+    height: 250px;
+}
+.clientCard img{
+    width: 100%;
+    height: 100%;
+}
+/*SERVICIOS.HTML*/
+section{
+    margin-top: 150px;
+}
+section article{
+    position: static;
+    width: 95%;
+    text-align: center;
+    min-height: 400px;
+    margin-bottom: 5px;
+}
+article img{
+    box-sizing: border-box ;
+    width: 95%;
+    border: 1px solid black;
+    margin: 0px auto 10px;
+    border-radius: 10px;
+}
+aside{
+    width: 80%;
+    margin: 100px auto;
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: x-large;
+    text-align: center;
+    overflow: hidden;
+}
+aside img{
+    width: 100%;
+    
+    
+}
+/*REGISTRO*/
+input{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+p input{
+    display: inline;
+    width: auto;
+}
+
+@media only screen and (min-width: 768px){
+    article img{
+        width: 50%;
+        float: left;
+        max-width: 402px;
+        max-height: 268px;
+    }
+}
+@media only screen and (min-width: 1024px){
+  
+    section{
+        display: inline-block;
+        width: 75%;
+    }
+    aside{
+        display: inline-block;
+        position: relative;
+        width: 20%;
+        vertical-align: top;
+        margin-top: 190px;
+    }
+    article img{
+        max-width: 383px;
+        max-height: 215px;
+    }
+       
+   
+}
