@@ -9,40 +9,19 @@
 </head>
 <body class="noBackImage ovfScroll">
     <header id="header">Nuestros Clientes</header>
-    <div id="clientContainer">
-        <div class="clientCard"><img src="img/5 eyes red Cartoon cute monsters set on white.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/5 eyes. Cartoon cute monsters set on white.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/angry green Cartoon cute monsters set on white.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/pensive-blonde-woman-with-beautiful-eyes-posing-on-dark-wall.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/blue bat. Cartoon cute monsters set on white.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/blue hands up. Cartoon cute monsters set on white.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/business-concept-portrait-young-handsome-cheerful-business-man-in-suit-talking-on-phone-looking-at-camera-white-background-copy-space.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/crazy red Cartoon cute monsters set on white.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/egg like pink. Cartoon cute monsters set on white.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/close-up-portrait-of-young-man-isolated-on-black-studio-background-photoshot-of-real-emotions-of-male-model-dreaming-and-smiling-hopeful-and-happy-facial-expression-human-emotions-concept.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/shirtless-handsome-male-with-perfect-muscular-body-leaning-on-wall-in-the-studio-looking-at-camera.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/fire hair violet Cartoon cute monsters set on white.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/green furry Cartoon cute monsters set on white.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/holiday-concept-young-beard-man-in-sweater-giving-thumb-up-to-camera.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/indofeb133 pink 3 leg.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/indofeb133 pink stumpy.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/indofeb133 sad bluey.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/thoughtful-bearded-hipster-male-in-violet-jacket-on-grey-vignette-background.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/indofeb133 shorty violet.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/indofeb133 smiley grey.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/indofeb133 yellowie.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/blue lady.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/jolly giant Cartoon cute monsters set on white.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/multiple Cartoon cute monsters set on white.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/orange bear Cartoon cute monsters set on white.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/orange dog Cartoon cute monsters set on white.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/martian 2109.w023.n001.1030B.p1.1030.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/pleasant-looking-young-cheerful-dark-haired-curly-lady-throwing-back-her-head-while-laughing-happily-with-closed-eyes-standing-over-blue-wall-with-hands-down.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/tall violet Cartoon cute monsters set on white.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/space kiddo 2109.w023.n001.1030B.p1.1030.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/tongue eye blue Cartoon cute monsters set on white.jpg" alt=""></div>
-        <div class="clientCard"><img src="img/two face violet. Cartoon cute monsters set on white.jpg" alt=""></div>
-    </div>
+    <main>
+        <div id="headNos">
+            <h3>Ellos ya confiaron en nosostros. No hay razón para que vos no lo hagas...</h3>
+        </div>
+        <div class="clientContainer" id="app" >
+            <div class="clientCard" v-for="i in clientes">
+                <img :src="i.imagen">
+                Nombre: {{i.nombre}}<br>Edad: {{i.edad}}<br>Origen:{{i.origen}}
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./js/clientes_fetch.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

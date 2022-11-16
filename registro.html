@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link rel="shortcut icon" href="./img/pastel icon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="https://kit.fontawesome.com/27becc0c4f.js" crossorigin="anonymous"></script>
 </head>
@@ -13,19 +12,26 @@
     <header id="header"></header>
     <main>
         <h2>Registro</h2>
-        <form action="show_data.html">
-            <label for="txtNombre">Nombre<br></label><input type="text" name="txtNombre" id="txtNombre"  placeholder="John"><br>
-            <label for="txtApellido">Apellido<br></label><input type="text" name="txtApellido" id="txtApellido"  placeholder="Doe"><br>
-            <label for="txtEdad">Edad<br></label><input type="text" name="txtEdad" id="txtEdad" min=0 max=100  placeholder="0-99"> <br>
-            <label for="txtMail">Mail<br></label><input type="email" name="txtMail" id="txtMail" placeholder="yourmail@xmail.com"><br>
-            <label for="txtPassword">Contraseña:<br></label><input type="password" name="txtPassword" id="txtPassword" placeholder="password"><br>
-            <label for="txxNacimiento">Fecha de Nac.<br></label><input type="date" name="txxNacimiento" id="txxNacimiento" min="1900-01-01" max="2023-01-15">
-            <p>Género:<br>
-            <input type="radio" name="txtGenero" id="txtGeneroH" value="hombre" checked>Hombre
-            <input type="radio" name="txtGenero" id="txtGeneroM" value="mujer" >Mujer
-            <input type="radio" name="txtGenero" id="txtGeneroO" value="otro" >Otro
+        <form action="show_data.html" id="formulario">
+            <label for="txtNombre">Nombre: </label>
+            <input type="text" name="txtNombre" id="txtNombre"  placeholder="John" required><br><br>
+            <label for="txtApellido">Origen: </label>
+            <input type="text" name="txtOrigen" id="txtOrigen"  placeholder="Saturno" required><br><br>
+            <label for="txtEdad">Edad: </label>
+            <input type="number" name="numEdad" id="numEdad" placeholder="0-99" min="0" required> <br><br>
+            <label for="txtMail">Mail: </label>
+            <input type="email" name="txtMail" id="txtMail" placeholder="yourmail@xmail.com"><br><br>
+            <label for="txtPassword">Contrasena: </label>
+            <input type="password" name="txtPassword" id="txtPassword" placeholder="password"><br><br>
+            <label for="txxNacimiento">Fecha de Nac.: </label>
+            <input type="date" name="txxNacimiento" id="txxNacimiento" min="1900-01-01" max="2023-01-15"><br><br>
+            <input type="text" accept="image/jpg" id="imageFile" name="imageFile">Avatar
+            <p>Genero:<br>
+                <input type="radio" name="txtGenero" id="txtGeneroH" value="hombre" checked>Hombre
+                <input type="radio" name="txtGenero" id="txtGeneroM" value="mujer" >Mujer
+                <input type="radio" name="txtGenero" id="txtGeneroO" value="otro" >Otro
             </p>
-            <label for="txtEstudios">Que estudios tenés completos?</label>
+            <label for="txtEstudios">Que estudios tenes completos?</label>
             <select name="txtEstudios" id="txtEstudios">
                 <option value="primarios">Primarios
                 <option value="secundarios">Secundarios
@@ -33,21 +39,23 @@
                 <option value="universitarios">Universitarios
             </select><br>
             <p>Tus gustos: <br>
-            <input type="checkbox" name="txtGustos" id="txtGustosC" value="caminata_espacial">Caminata Espacial
-            <input type="checkbox" name="txtGustos" id="txtGustosP" value="salto_lunar">Salto Lunar<br>
-            <input type="checkbox" name="txtGustos" id="txtGustosF" value="caza_furtiva">Caza Furtiva 
-            <input type="checkbox" name="txtGustos" id="txtGustosCR" value="coleccion_rocas">Coleccionar Rocas<br>
-            <input type="checkbox" name="txtGustos" id="txtGustosD" value="mirar_estrellas">Mirar Estrellas
-            <input type="checkbox" name="txtGustos" id="txtGustosN" value="asado">Asado con Amigos
+                <input type="checkbox" name="txtGustos" id="txtGustosC" value="caminata_espacial">Caminata Espacial
+                <input type="checkbox" name="txtGustos" id="txtGustosP" value="salto_lunar">Salto Lunar<br>
+                <input type="checkbox" name="txtGustos" id="txtGustosF" value="caza_furtiva">Caza Furtiva 
+                <input type="checkbox" name="txtGustos" id="txtGustosCR" value="coleccion_rocas">Coleccionar Rocas<br>
+                <input type="checkbox" name="txtGustos" id="txtGustosD" value="mirar_estrellas">Mirar Estrellas
+                <input type="checkbox" name="txtGustos" id="txtGustosN" value="asado">Asado con Amigos
             </p>
             <label for="txtComentarios">Dejanos un comentario :)</label><br>
-            <textarea name="txtComentarios" id="txtComentarios"  col="20" rows="6" placeholder="Esta página es lo mejor porque..."></textarea><br><br>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Borrar">
+            <textarea name="txtComentarios" id="txtComentarios" rows="6" placeholder="Esta pagina es lo mejor porque..."></textarea><br><br>
+            <button type="button" onclick="guardar()">Enviar</button><br><br>
+            <input type="reset" value="Borrar"><br><br>
+            <input><img src="./img/alienship.png" alt="alienship" width="50">
         </form><br>
     </main>
     <footer></footer>
     <script src="./js/main.js"></script>
+    <script src="./js/clientes_create.js"></script>
     
 </body>
 </html>

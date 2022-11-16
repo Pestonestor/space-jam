@@ -77,6 +77,16 @@ footer{
 nav a{
     margin-left: 2em;
 }
+
+/*NOSOTROS*/
+#nosotros{
+    width: 200px;
+    height: fit-content;
+    color: aliceblue;
+    margin: 80px auto;
+    text-align: center;
+    transform: perspective(10px) rotateX(1deg);
+}
 /*TRANSFORM aplicado a planetas en NOSOTROS:HTML*/
 #moon{
     z-index: 1;
@@ -155,13 +165,27 @@ article span{
     border: 1px solid black;
     padding: 2px 4px;
 }
+article + div{
+    width: 50vw;
+    height: 300px;
+    margin: auto;
+    overflow: hidden;
+    border: 1px double black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px;
+}
 main{
     padding-bottom: 450px;
 }
 /*CLIENTES.HTML hecho con FLEX*/
-#clientContainer{
+#headNos{
+    width:auto;
+    
+    margin: 150px auto auto 20px;
+}
+.clientContainer{
     position: absolute;
-    top: 130px;
+    top: 230px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -169,12 +193,17 @@ main{
     gap: 12px
 }
 .clientCard{
+    background-color: rgb(255, 253, 218);
+    border: 1px solid black;
+    border-radius: 5%;
+    overflow: hidden;
     width: 200px;
-    height: 250px;
+    height: 300px;
+    text-align: center;
 }
 .clientCard img{
     width: 100%;
-    height: 100%;
+    height: 70%;
 }
 /*SERVICIOS.HTML*/
 section{
@@ -206,21 +235,32 @@ aside{
 }
 aside img{
     width: 100%;
-    
-    
+     
 }
 /*REGISTRO*/
-input{
-    display: block;
-    width: 90%;
+label{
+    display: inline;
+}
+form{
+    position: relative;
+    width: 60%;
     margin: auto;
+}
+form>input, button{
+    display:block;
+    position: absolute;
+    box-sizing: border-box;
+    width: 60%;
+    right: 10%;
 }
 p input{
     display: inline;
-    width: auto;
 }
 
 @media only screen and (min-width: 768px){
+    form>input{
+        display: inline;
+    }
     article img{
         width: 50%;
         float: left;
